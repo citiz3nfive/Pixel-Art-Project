@@ -1,7 +1,7 @@
 $(document).ready(function() {});
 $('#sizePicker').submit(function makeGrid(grid) {
     $('table tr').remove();
-    const h = $('#inputHeight').val();
+    const h = $('#inputHeight').val(); // Select size input
     const w = $('#inputWidth').val();
     for (var i = 1; i <= h; i++) {
         $('table').append('<tr></tr>');
@@ -11,9 +11,9 @@ $('#sizePicker').submit(function makeGrid(grid) {
         }
     }
     grid.preventDefault();
-    function makeGrid() {} 
+    function makeGrid() {} // When size is submitted by the user, call makeGrid().
     $('.square').click(function(event) {
-        var color = $('#colorPicker').val();
+        var color = $('#colorPicker').val(); // Select color input.
         $(this).css('background-color', color);
     });
 });
