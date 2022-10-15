@@ -6,13 +6,13 @@ $('#sizePicker').submit(function makeGrid(grid) {
     for (var i = 1; i <= h; i++) {
         $('table').append('<tr></tr>');
         for (var x = 1; x <= w; x++) {
-            $('td').attr('class', 'cell');
+            $('td').attr('class', 'square');
             $('tr:last').append('<td></td>');
         }
     }
     grid.preventDefault();
     function makeGrid() {} 
-    $('.cell').click(function(event) {
+    $('.square').click(function(event) {
         var color = $('#colorPicker').val();
         $(this).css('background-color', color);
     });
